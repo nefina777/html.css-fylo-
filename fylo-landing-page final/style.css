@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  header {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 60px 0;
+  }
+  .hero-text {
+    flex-grow: 1;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .hero-text input {
+    padding: 10px;
+    width: 250px;
+    margin-right: 10px;
+  }
+  
+  .hero-text button {
+    padding: 10px 20px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .productivity {
+    background: #f0f4f8;
+    padding: 60px 0;
+  }
+  
+  .productivity .text {
+    max-width: 700px;
+  }
+  
+  .productivity h2 {
+    margin-bottom: 20px;
+  }
+  
+  .productivity p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .productivity a {
+    color: #10b981;
+  }
+  .productivity a:hover {
+    opacity: 0.8;
+    color: #10b981;
+  }
+  blockquote {
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    padding-left: 20px;
+    background-color: white;
+    font-style: italic;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+ 
+  .profile > img {
+    height: 40px;
+    border-radius: 50%;
+  }
+  .profile {
+    
+    height: 40px;
+    background-color: #ee2c2c00;
+    display: flex;
+    gap: 10px;
+  }
+  .profile > .text {
+    padding-top: 5px;
+  }
+  .profile p{
+    font-size: 0.8em;
+  }
+
+  .early-access {
+    background: #5e5b99;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .early-access input {
+    padding: 10px;
+    margin-top: 20px;
+    width: 250px;
+  }
+  
+  .early-access button {
+    padding: 10px 20px;
+    background: #10b981;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  footer {
+    background: #011f49;
+    color: white;
+    padding: 40px 20px;
+  }
+  
+  
+  footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+  
+  footer a {
+    color: #a0aec0;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .logo{
+    width: 200px;
+    height: 50px;
+    background-color: #10b98100;
+    background-image: url('/images/logo.svg');
+    background-repeat: no-repeat;
+  }
+
+  .hero-img {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .hero-img img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Override the .container inside .hero to be responsive flex */
+.hero .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  /* Text section takes full width on mobile, side-by-side on desktop */
+  .hero-text, .hero-img {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  
+  /* Desktop view */
+  @media (min-width: 768px) {
+    .hero-text, .hero-img {
+      flex: 1 1 45%;
+      text-align: left;
+    }
+  
+    .hero-img {
+      text-align: right;
+    }
+  }
+  
+  /* Optional: Make form inputs wrap better on mobile */
+  .hero-text input,
+  .hero-text button {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-text input {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  
+    .hero-text button {
+      width: auto;
+    }
+  }
+  
+  /* Make .productivity .container flex like hero */
+.productivity .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  /* Responsive .text and .img */
+  .productivity .text,
+  .productivity .img {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  .productivity blockquote {
+    justify-self: center;
+  }
+  /* On larger screens: side-by-side */
+  @media (min-width: 768px) {
+    .productivity .text,
+    .productivity .img {
+      flex: 1 1 45%;
+      text-align: left;
+    }
+  
+    .productivity .img {
+      text-align: right;
+    }
+    .productivity blockquote {
+        justify-self: left;
+    }
+  }
+  
+  /* Image styling inside .img */
+  .productivity .img img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .footer-contact img {
+    margin-right: 15px;
+  }
+
+  .footer-contact > div {
+    margin: 25px;
+  }
+  .footer-contact > p {
+    margin-left: 25px;
+    margin-bottom: 20px;
+  }
+
+ @media screen and (max-width: 768px) {
+    footer > .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-links, .footer-socials{
+        margin-left:  25px;
+    }
+    
+ }
+
+ a {
+    margin-block: 15px;
+ }
+ a:hover{
+    color: #3b82f6;
+ }
+ .early-access .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+  
+ .early-access-text > h3 {
+    margin-bottom: 30px;
+}
+
+
+.form input {
+    margin-bottom: 10px;
+}
+
+
+  @media (min-width: 768px) {
+    .early-access .container {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  
+    .early-access-text,
+    .form {
+      flex: 1 1 45%;
+    }
+    
+    .early-access-text {
+        text-align: left;
+    }
+    
+  }
+
+  @media (max-width: 768px) {
+    .form button {
+        width: 250px;
+    }
+  }
+  
